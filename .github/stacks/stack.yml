@@ -1,0 +1,29 @@
+name: Azure app install test
+description: Azure app install test
+branding:
+  icon: cloud
+  color: blue
+
+inputs:
+  - name: something
+    type: string
+    required: true
+
+configs:
+  repo-metadata:
+    parameters:
+      description: Azure app install test
+      topics:
+        - nodejs
+        - expressjs
+
+  security:
+    parameters:
+      vulnerability-alerts: true
+      automated-security-fixes: true
+
+github-apps:
+  - slug: azure-oidc-uat
+
+init:
+ uses: stack-init.yml
